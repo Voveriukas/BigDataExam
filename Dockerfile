@@ -1,7 +1,5 @@
-# PySpark AIS Collision Detector
 FROM python:3.11-slim
 
-# Install Java 21 (OpenJDK 17 not available on Debian Trixie)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     openjdk-21-jre-headless \
     wget \
