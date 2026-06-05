@@ -16,8 +16,6 @@ services:
       - DATA_DIR=/app/data
       - OUTPUT_DIR=/app/output
       - SPARK_DRIVER_MEMORY=6g
-    # Shared memory for Spark shuffle operations
     shm_size: '4gb'
-    # Give Docker enough memory - Spark needs driver memory + overhead
     mem_limit: 10g
     mem_reservation: 6g
