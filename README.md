@@ -131,3 +131,10 @@ Every candidate pair receives a numeric collision score. Higher = more collision
 | No SOG reaction | up to -10 | If SOG drop < 1 knot |
 | Distance over 100m | -2 per 100m | Closer approaches rank higher |
 | Scene density | -3 per extra vessel | Busy rescue scenes penalized |
+
+
+## Docker Hub
+
+```bash
+docker pull voveriukas/ais-collision:latest
+```
