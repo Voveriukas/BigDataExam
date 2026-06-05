@@ -1,4 +1,4 @@
-# AIS Collision Detection - Written Report
+# AIS Collision Detection
 
 ## Findings
 
