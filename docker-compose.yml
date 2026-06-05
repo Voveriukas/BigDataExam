@@ -1,0 +1,23 @@
+# AIS Collision Detector
+# ======================
+# Place December 2021 AIS CSV files in ./data/ before running.
+#
+# Usage:
+#   docker compose up --build
+
+services:
+  collision-detector:
+    build: .
+    container_name: ais-collision-detector
+    volumes:
+      - ./data:/app/data:ro
+      - ./output:/app/output
+    environment:
+      - DATA_DIR=/app/data
+      - OUTPUT_DIR=/app/output
+      - SPARK_DRIVER_MEMORY=6g
+    # Shared memory for Spark shuffle operations
+    shm_size: '4gb'
+    # Give Docker enough memory - Spark needs driver memory + overhead
+    mem_limit: 10g
+    mem_reservation: 6g
